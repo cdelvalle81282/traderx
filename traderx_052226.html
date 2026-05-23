@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Become a Trader X Partner. A Private Invitation from Option Pit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* ---------- Reset & base ---------- */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1814;
+    --ink-soft: #3a3631;
+    --ink-muted: #6b655d;
+    --paper: #f6f2ea;
+    --paper-warm: #efe9dc;
+    --paper-card: #fffdf8;
+    --rule: #d4cdbe;
+    --accent: #8b0000;
+    --accent-deep: #6b0000;
+    --gold: #a08144;
+    --placeholder-bg: #fff9d6;
+    --placeholder-border: #d4a017;
+    --placeholder-ink: #5c4500;
+
+    --serif: 'Cormorant Garamond', 'Adobe Garamond Pro', Garamond, 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* ---------- Paper texture / atmosphere ---------- */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(160, 129, 68, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(139, 0, 0, 0.03) 0%, transparent 50%);
+    z-index: 0;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.35 0 0 0 0 0.25 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- Layout container ---------- */
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* ---------- Masthead ---------- */
+  .masthead {
+    padding: 56px 0 48px;
+    border-bottom: 1px solid var(--rule);
+    text-align: center;
+    position: relative;
+  }
+
+  .masthead-overline {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 28px;
+  }
+
+  .masthead-eyebrow {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--accent);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .masthead-title {
+    font-family: var(--serif);
+    font-size: clamp(48px, 8vw, 84px);
+    font-weight: 600;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+
+  .masthead-deck {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--ink-soft);
+    font-weight: 400;
+    max-width: 540px;
+    margin: 0 auto 36px;
+  }
+
+  .masthead-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 28px 0;
+    color: var(--gold);
+  }
+
+  .masthead-ornament .line {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .masthead-ornament .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .concierge-card {
+    background: var(--paper-card);
+    border: 1px solid var(--rule);
+    padding: 20px 28px;
+    margin: 8px auto 0;
+    max-width: 520px;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    position: relative;
+  }
+
+  .concierge-card strong {
+    font-style: normal;
+    font-family: var(--sans);
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+
+  .contact-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px dotted var(--rule);
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-muted);
+    letter-spacing: 0.02em;
+  }
+
+  .contact-bar a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .contact-bar a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ---------- Body sections ---------- */
+  section {
+    padding: 64px 0;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  section:last-of-type { border-bottom: none; }
+
+  .section-number {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(34px, 4.8vw, 48px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 36px;
+  }
+
+  h3 {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 32px 0 16px;
+  }
+
+  p {
+    font-family: var(--sans);
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    margin-bottom: 22px;
+    max-width: 65ch;
+  }
+
+  p strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  p em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.07em;
+    color: var(--ink);
+  }
+
+  /* ---------- Lead paragraph ---------- */
+  .lead p:first-of-type {
+    font-family: var(--serif);
+    font-size: 26px;
+    line-height: 1.45;
+    color: var(--ink);
+    font-weight: 400;
+    margin-bottom: 28px;
+  }
+
+  /* ---------- Pull quote / standout ---------- */
+  .standout {
+    background: var(--paper-card);
+    border-left: 3px solid var(--accent);
+    padding: 28px 32px;
+    margin: 36px 0;
+    font-family: var(--serif);
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink);
+    font-style: italic;
+  }
+
+  .standout strong {
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* ---------- Repeating "When we launched..." block ---------- */
+  .litany {
+    margin: 32px 0;
+    padding: 28px 32px;
+    background: var(--paper-card);
+    border: 1px solid var(--rule);
+  }
+
+  .litany p {
+    margin-bottom: 12px;
+    font-size: 17px;
+  }
+
+  .litany p:last-child {
+    margin-bottom: 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    margin-top: 16px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ---------- Editor block placeholder ---------- */
+  .placeholder-block {
+    background: var(--placeholder-bg);
+    border: 2px dashed var(--placeholder-border);
+    padding: 28px 32px;
+    margin: 32px 0;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .placeholder-block::before {
+    content: 'NEEDS CONTENT';
+    position: absolute;
+    top: -10px;
+    left: 24px;
+    background: var(--placeholder-border);
+    color: white;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    padding: 3px 10px;
+    border-radius: 2px;
+  }
+
+  .placeholder-block h4 {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--placeholder-ink);
+    margin-bottom: 14px;
+  }
+
+  .placeholder-block p {
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--placeholder-ink);
+    margin-bottom: 10px;
+    max-width: none;
+  }
+
+  .placeholder-block ul {
+    margin: 10px 0 10px 20px;
+    color: var(--placeholder-ink);
+  }
+
+  .placeholder-block li {
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+
+  .placeholder-block em {
+    font-style: italic;
+  }
+
+  /* ---------- AI Stack section ---------- */
+  .ai-tool {
+    margin: 28px 0;
+    padding: 24px 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .ai-tool:first-of-type { border-top: none; padding-top: 8px; }
+
+  .ai-tool-name {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .ai-tool p {
+    margin-bottom: 0;
+  }
+
+  /* ---------- Package table ---------- */
+  .package-frame {
+    background: var(--paper-card);
+    border: 1px solid var(--rule);
+    margin: 32px 0;
+    padding: 8px;
+  }
+
+  .package-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--sans);
+  }
+
+  .package-table caption {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    padding: 20px 24px 16px;
+    color: var(--ink);
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .package-table th {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    text-align: left;
+    padding: 16px 24px 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .package-table th:last-child { text-align: right; }
+
+  .package-table td {
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink);
+    font-size: 17px;
+  }
+
+  .package-table tr:last-child td { border-bottom: none; }
+
+  .package-table td:last-child {
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 16px;
+    color: var(--ink-soft);
+  }
+
+  .package-table .total-row td {
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--paper-warm);
+    font-size: 18px;
+    padding: 18px 24px;
+  }
+
+  .package-table .total-row td:last-child {
+    color: var(--accent);
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  /* ---------- Project NEXT spotlight ---------- */
+  .spotlight {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 48px 40px;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spotlight::before {
+    content: 'LAUNCHING JUNE 6';
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+  }
+
+  .spotlight h3 {
+    color: var(--paper);
+    font-size: 36px;
+    margin: 0 0 8px;
+  }
+
+  .spotlight .spotlight-sub {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--gold);
+    margin-bottom: 28px;
+  }
+
+  .spotlight p {
+    color: rgba(246, 242, 234, 0.85);
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .spotlight p strong {
+    color: var(--paper);
+  }
+
+  .spotlight-highlight {
+    font-family: var(--serif);
+    font-size: 28px;
+    line-height: 1.3;
+    color: var(--paper);
+    margin: 28px 0 !important;
+    padding: 20px 0;
+    border-top: 1px solid rgba(160, 129, 68, 0.4);
+    border-bottom: 1px solid rgba(160, 129, 68, 0.4);
+  }
+
+  /* ---------- Benefits list ---------- */
+  .benefits {
+    margin: 32px 0;
+  }
+
+  .benefit {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .benefit:last-child { border-bottom: none; }
+
+  .benefit-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .benefit p {
+    margin-bottom: 0;
+    font-size: 17px;
+  }
+
+  /* ---------- Pricing tiers ---------- */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin: 40px 0;
+  }
+
+  @media (min-width: 700px) {
+    .pricing-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .tier {
+    background: var(--paper-card);
+    border: 1px solid var(--rule);
+    padding: 36px 32px;
+    position: relative;
+  }
+
+  .tier.lifetime {
+    border: 2px solid var(--accent);
+    background: linear-gradient(180deg, var(--paper-card) 0%, var(--paper-warm) 100%);
+  }
+
+  .tier.lifetime::before {
+    content: 'RECOMMENDED';
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    background: var(--accent);
+    color: white;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    padding: 4px 12px;
+  }
+
+  .tier-name {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+
+  .tier-list-price {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--ink-muted);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+
+  .tier-price {
+    font-family: var(--serif);
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .tier.lifetime .tier-price { color: var(--accent); }
+
+  .tier-price-note {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-muted);
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+
+  .tier-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--rule);
+    margin: 0 0 24px;
+  }
+
+  .tier p {
+    font-size: 16px;
+    margin-bottom: 14px;
+    max-width: none;
+  }
+
+  .tier p:last-child { margin-bottom: 0; }
+
+  /* ---------- Math callout ---------- */
+  .math-block {
+    background: var(--paper-card);
+    border: 1px solid var(--rule);
+    padding: 36px 32px;
+    margin: 32px 0;
+  }
+
+  .math-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+    gap: 16px;
+  }
+
+  .math-row:last-of-type { border-bottom: none; }
+
+  .math-label {
+    font-family: var(--sans);
+    font-size: 16px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+
+  .math-value {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+
+  .math-value.accent { color: var(--accent); }
+
+  /* ---------- Steps ---------- */
+  .steps {
+    counter-reset: step;
+    margin: 32px 0;
+  }
+
+  .step {
+    counter-increment: step;
+    padding: 28px 0 28px 80px;
+    position: relative;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .step:last-child { border-bottom: none; }
+
+  .step::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 26px;
+    font-family: var(--serif);
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .step-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .step p {
+    margin-bottom: 0;
+    font-size: 17px;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq {
+    margin: 32px 0;
+  }
+
+  details.faq-item {
+    border-bottom: 1px solid var(--rule);
+    padding: 0;
+  }
+
+  details.faq-item[open] {
+    background: var(--paper-card);
+  }
+
+  details.faq-item summary {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+    padding: 22px 48px 22px 0;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    line-height: 1.35;
+    transition: color 0.2s ease;
+  }
+
+  details.faq-item summary:hover { color: var(--accent); }
+
+  details.faq-item summary::-webkit-details-marker { display: none; }
+
+  details.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 8px;
+    top: 22px;
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--gold);
+    transition: transform 0.3s ease;
+    line-height: 1;
+  }
+
+  details.faq-item[open] summary::after {
+    content: '–';
+    transform: rotate(0deg);
+  }
+
+  details.faq-item .faq-answer {
+    padding: 0 48px 28px 0;
+  }
+
+  details.faq-item .faq-answer p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+
+  details.faq-item .faq-answer p:last-child { margin-bottom: 0; }
+
+  /* ---------- This Isn't For Everyone (permission block) ---------- */
+  .permission {
+    background: var(--paper-warm);
+    border-top: 3px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
+    padding: 56px 40px;
+    margin: 48px 0;
+    text-align: center;
+  }
+
+  .permission h2 {
+    font-size: 40px;
+    margin-bottom: 28px;
+  }
+
+  .permission p {
+    max-width: 56ch;
+    margin: 0 auto 18px;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .permission p:last-child { margin-bottom: 0; }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta {
+    text-align: center;
+    padding: 80px 32px 64px;
+    background: var(--ink);
+    color: var(--paper);
+    margin: 64px -32px 0;
+  }
+
+  .final-cta h2 {
+    color: var(--paper);
+    font-size: 44px;
+    margin-bottom: 24px;
+  }
+
+  .final-cta p {
+    color: rgba(246, 242, 234, 0.85);
+    margin: 0 auto 20px;
+    text-align: center;
+    max-width: 52ch;
+  }
+
+  .final-cta-phone {
+    font-family: var(--serif);
+    font-size: 36px;
+    color: var(--gold);
+    margin: 32px 0 12px;
+    letter-spacing: 0.02em;
+  }
+
+  .final-cta-email {
+    font-family: var(--mono);
+    font-size: 16px;
+    color: var(--paper);
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+    text-decoration: none;
+  }
+
+  /* ---------- Footer pricing summary ---------- */
+  .price-summary {
+    background: var(--paper-warm);
+    padding: 32px 32px;
+    margin: 48px -32px 0;
+    text-align: center;
+  }
+
+  .price-summary-row {
+    font-family: var(--serif);
+    font-size: 20px;
+    margin: 10px 0;
+    color: var(--ink);
+  }
+
+  .price-summary-row strong {
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .price-summary-note {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-muted);
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    text-align: center;
+    padding: 40px 0;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* ---------- Testimonial placeholder ---------- */
+  .testimonials-section {
+    text-align: center;
+  }
+
+  .testimonials-section h2 {
+    text-align: center;
+  }
+
+  /* ---------- Mobile tuning ---------- */
+  @media (max-width: 700px) {
+    .container { padding: 0 22px; }
+    body { font-size: 17px; }
+    p { font-size: 17px; }
+    .masthead { padding: 40px 0 36px; }
+    .masthead-deck { font-size: 20px; }
+    .lead p:first-of-type { font-size: 22px; }
+    .standout { font-size: 19px; padding: 22px 24px; }
+    .litany { padding: 22px 24px; }
+    .spotlight { padding: 32px 24px; }
+    .spotlight::before { position: static; display: inline-block; margin-bottom: 12px; }
+    .spotlight h3 { font-size: 28px; }
+    .spotlight-highlight { font-size: 22px; }
+    .tier { padding: 28px 22px; }
+    .tier-price { font-size: 40px; }
+    .math-value { font-size: 22px; }
+    .math-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .step { padding-left: 60px; }
+    .step::before { font-size: 36px; top: 28px; }
+    details.faq-item summary { font-size: 19px; padding-right: 36px; }
+    .permission { padding: 40px 24px; }
+    .permission h2 { font-size: 30px; }
+    .final-cta { padding: 56px 24px 48px; margin: 48px -22px 0; }
+    .final-cta-phone { font-size: 28px; }
+    .price-summary { margin: 36px -22px 0; }
+  }
+
+  /* ---------- Reveal animation on load ---------- */
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .masthead > * {
+    opacity: 0;
+    animation: rise 0.8s ease-out forwards;
+  }
+
+  .masthead-overline { animation-delay: 0.05s; }
+  .masthead-eyebrow { animation-delay: 0.15s; }
+  .masthead-title { animation-delay: 0.25s; }
+  .masthead-ornament { animation-delay: 0.4s; }
+  .masthead-deck { animation-delay: 0.5s; }
+  .concierge-card { animation-delay: 0.65s; }
+  .contact-bar { animation-delay: 0.8s; }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ============ MASTHEAD ============ -->
+  <header class="masthead">
+    <div class="masthead-overline">Option Pit &nbsp;·&nbsp; Private Correspondence</div>
+    <div class="masthead-eyebrow">A Private Invitation from Option Pit</div>
+    <h1 class="masthead-title">Become a<br>Trader X Partner</h1>
+
+    <div class="masthead-ornament">
+      <div class="line"></div>
+      <div class="dot"></div>
+      <div class="line"></div>
+    </div>
+
+    <p class="masthead-deck">One Decision.<br>Every Option Pit Service.<br>For Life.</p>
+
+    <div class="concierge-card">
+      <strong>Ted</strong>, your VP of Concierge, is standing by to walk you through your credit, your payment plan, and your activation.
+    </div>
+
+    <div class="contact-bar">
+      <span>Activate by Phone</span>
+      <a href="tel:8888723301">888&middot;872&middot;3301</a>
+      <a href="mailto:concierge@optionpit.com">concierge@optionpit.com</a>
+    </div>
+  </header>
+
+  <!-- ============ SECTION I: We've Been Paying Attention ============ -->
+  <section class="lead">
+    <div class="section-number">Section I</div>
+    <h2>We've Been Paying Attention</h2>
+
+    <p>We track who shows up.</p>
+
+    <p>Who takes the trades. Who asks the hard questions in the live rooms. Who buys. Who renews. Who invests in themselves year after year.</p>
+
+    <p>That's how we know who you are.</p>
+
+    <p>You're not a "retail trader." You haven't been one for a while now.</p>
+
+    <p>You're the kind of person who runs a marathon to lose weight. The kind who goes back to school at 40. The kind who, when you got a 31 on the ACT, decided to take it again.</p>
+
+    <p>You're not here because you're failing.</p>
+
+    <p>You're here because you're winning. You want to keep winning. And you understand that <em>the rooms you sit in matter more than the trades you take.</em></p>
+
+    <p>Which is why we're writing to you today.</p>
+
+    <p>You're in our top 1%. And frankly, we think you're ready to play a bigger role in what we're building here.</p>
+
+    <p>So we're inviting you to do something we've never offered the general public.</p>
+
+    <p>We're inviting you to become a <strong>Trader X Partner.</strong></p>
+
+    <p>To be clear. We're not selling you a piece of Option Pit. We're not asking you to show up at board meetings. It's nothing like that.</p>
+
+    <p>But we <em>are</em> asking you to become more than a subscriber.</p>
+
+    <div class="standout">
+      If you accept this invitation, <strong>you will never pay another Option Pit subscription fee again.</strong>
+    </div>
+
+    <p>Every service we run today. Every service we launch tomorrow. Every AI scanner. Every new strategy. Every breakthrough we build for as long as Option Pit is in business. You own it. Permanently. As a Partner.</p>
+
+    <p>That's a different kind of relationship than the one you're in with us today.</p>
+
+    <p>Let us explain what it actually means.</p>
+  </section>
+
+  <!-- ============ SECTION II: Owner not Customer ============ -->
+  <section>
+    <div class="section-number">Section II</div>
+    <h2>You Stop Being a Customer. You Become an Owner.</h2>
+
+    <p>Most newsletter companies sell you a subscription. They get your card on file. They bill you every year. They upsell you whenever something new comes out.</p>
+
+    <p>That's the business.</p>
+
+    <p>That's not what Trader X is.</p>
+
+    <p>Trader X is the version of Option Pit where we stop selling and you stop buying. Where you're done evaluating offers. Done picking and choosing. Done getting marketed to.</p>
+
+    <p>You become a Partner. You get everything we currently make. You get everything we make from this point forward. And if you choose Lifetime, you get all of it for the rest of your life.</p>
+
+    <div class="litany">
+      <p>When we launched Alpha AI, our Pro members got it first.</p>
+      <p>When we launched Wiretap, same thing.</p>
+      <p>When we launched Ripzone, same thing.</p>
+      <p>When we launch Project NEXT this June at a retail price of $1,999 a year, Trader X Partners get it free.</p>
+      <p>When the new AI scanners go live in Q3, Trader X Partners get them free.</p>
+      <p>When the AI scanner <em>after that</em> launches in 2027, Trader X Lifetime Partners still get it free.</p>
+      <p>That's the model. One decision, made once, that ends the conversation about what to buy next.</p>
+    </div>
+
+    <p>But the model only matters if the people behind it are the right people.</p>
+
+    <p>So let us tell you who you'd actually be partnering with.</p>
+  </section>
+
+  <!-- ============ SECTION III: A Team With Floor Time ============ -->
+  <section>
+    <div class="section-number">Section III</div>
+    <h2>A Team With Floor Time, Not Just Screen Time</h2>
+
+    <p>You're not partnering with a publisher.</p>
+
+    <p>You're partnering with traders.</p>
+
+    <p>Every principal at Option Pit was an exchange member at one point. Every one of them stood in a pit. Every one of them traded their own book. And every one of them survived in a business where 99% of retail traders eventually quit.</p>
+
+    <div class="placeholder-block">
+      <h4>Editor Credential Block. Bios Required.</h4>
+      <p>Bio paragraphs needed for each principal. Each bio: 80 to 120 words.</p>
+      <p><strong>Format:</strong> credential, scope, time depth, signature moment, what they bring to Trader X today.</p>
+      <ul>
+        <li>Mark Sebastian</li>
+        <li>Andrew Giovinazzi</li>
+        <li>Frank Gregory</li>
+        <li>Licia Leslie</li>
+        <li>Hans Albrecht</li>
+        <li>Tim Colby</li>
+      </ul>
+    </div>
+
+    <p>What unites them is over <strong>100 years of combined floor and institutional experience.</strong> Plus a decision, made together, to stop trading for someone else and start teaching the next generation of professional-grade retail traders.</p>
+
+    <p>This is the group you're partnering with. These are the people on the other end of your concierge line.</p>
+
+    <p>And they are, quietly, the reason Trader X exists in the first place.</p>
+  </section>
+
+  <!-- ============ SECTION IV: The Wall Street AI Stack ============ -->
+  <section>
+    <div class="section-number">Section IV</div>
+    <h2>The Wall Street AI Stack. Built In-House.</h2>
+
+    <p>Here's something most retail traders will never know. The AI tools your broker offers you, and the AI tools your fund manager uses, are not the same product.</p>
+
+    <p>The retail version is a wrapper.</p>
+
+    <p>The professional version is a workflow.</p>
+
+    <p>We built Trader X's AI stack to be the professional version.</p>
+
+    <div class="ai-tool">
+      <div class="ai-tool-name">Alpha AI</div>
+      <p>Scans real-time options flow across the entire US listed market for institutional positioning signals. The kind of asymmetric setups a market maker would build a position around. Your broker's AI shows you historical patterns. Alpha AI shows you live conviction.</p>
+    </div>
+
+    <div class="ai-tool">
+      <div class="ai-tool-name">Ceres Club</div>
+      <p>Tracks institutional option footprints. It reveals where the biggest options desks are positioning before the move happens. (You may have known it as Option Fingerprints. Same scanner, new name.) This is the same kind of order-flow analysis institutional desks pay six figures to access internally.</p>
+    </div>
+
+    <div class="ai-tool">
+      <div class="ai-tool-name">Project NEXT</div>
+      <p>Launches June 6th. Led by Licia Leslie, it's a 0DTE and 1DTE options trading service. It's already been through full beta testing with our top-tier members. As a Trader X Partner, it's included.</p>
+    </div>
+
+    <div class="ai-tool">
+      <div class="ai-tool-name">Q3 AI Releases</div>
+      <p>Multiple new AI scanners and trading products are in build right now. Trader X Partners get every one of them. Free. The moment they go live. New members will pay retail. You won't pay anything.</p>
+    </div>
+
+    <p style="margin-top: 36px;">This is the piece that separates Trader X from every other newsletter in the market.</p>
+
+    <div class="standout">
+      You're not subscribing to research. <strong>You're getting access to the same professional-grade tooling we use to run our own books.</strong>
+    </div>
+
+    <p>Which is the right time to show you what's actually inside the Partnership.</p>
+  </section>
+
+  <!-- ============ SECTION V: What's Inside the Package ============ -->
+  <section>
+    <div class="section-number">Section V</div>
+    <h2>What's Inside the Trader X Complete Package</h2>
+
+    <div class="package-frame">
+      <table class="package-table">
+        <caption>Active Trading Services</caption>
+        <thead>
+          <tr><th>Service</th><th>Annual Retail Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Alpha AI</td><td>$4,999</td></tr>
+          <tr><td>0DTE</td><td>$3,999</td></tr>
+          <tr><td>Ripzone</td><td>$3,999</td></tr>
+          <tr><td>Turbo Income</td><td>$3,999</td></tr>
+          <tr><td>Weekly Profit Cycles</td><td>$3,999</td></tr>
+          <tr><td>Delta Strike</td><td>$2,999</td></tr>
+          <tr><td>Capitol Gains</td><td>$2,999</td></tr>
+          <tr><td>Ceres Club</td><td>$2,499</td></tr>
+          <tr><td>Wiretap</td><td>$1,999</td></tr>
+          <tr><td>Project NEXT</td><td>$1,999</td></tr>
+          <tr><td>Option Shopper</td><td>$1,999</td></tr>
+          <tr><td>Special Situations</td><td>$999</td></tr>
+          <tr><td>Ticker Highlight Show Premium</td><td>$588</td></tr>
+          <tr class="total-row"><td>Subtotal in annual retail value. Yours, included.</td><td>$36,036</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Every Future Service We Launch</h3>
+
+    <p>Over the last four years, Option Pit has launched four new services per year on average.</p>
+
+    <p>In 2025 alone, we launched six. Alpha AI. Turbo Income. Special Situations. Small Account Challenge. Flash 7. Ticker Highlight Show Premium.</p>
+
+    <p>Trader X Partners get every one of them. Past, present, and future.</p>
+
+    <p>Annual Partners get every service launched during your subscription year.</p>
+
+    <div class="standout">
+      <strong>Lifetime Partners get every service launched, forever, as long as Option Pit is in business.</strong>
+    </div>
+
+    <p>That's the math that matters. Every year you renew an Annual subscription, the retail value of "everything" grows. Every year a Lifetime Partner doesn't renew anything. They never have to.</p>
+
+    <p>And the first proof of that promise launches in less than a month.</p>
+  </section>
+
+  <!-- ============ SECTION VI: Project NEXT Spotlight ============ -->
+  <section>
+    <div class="section-number">Section VI</div>
+    <h2>Project NEXT: Your First Partner-Only Launch</h2>
+
+    <div class="spotlight">
+      <h3>Project NEXT</h3>
+      <div class="spotlight-sub">A 0DTE & 1DTE Options Service Led by Licia Leslie</div>
+      <p>On June 6th, we go live with <strong>Project NEXT.</strong></p>
+      <p>If the name sounds new, that's because it's been operating under a different one. Project NEXT was originally developed and beta-tested as <strong>Project MNS</strong> with a small group of our top members.</p>
+      <p>The beta is done. The methodology works. The service is launching to the public at <strong>$1,999 a year.</strong></p>
+      <p class="spotlight-highlight">Trader X Partners pay nothing.</p>
+    </div>
+
+    <div class="placeholder-block">
+      <h4>Project NEXT Proof Section. Specifics Required.</h4>
+      <p>To finish this spotlight we need:</p>
+      <ul>
+        <li>One-line description of what Project NEXT identifies (the actual edge: order flow signal? gamma exposure? something else?)</li>
+        <li>One specific track record number from the MNS beta (sample trades, win rate, average return: anything verifiable)</li>
+        <li>One-line "why now": what makes 0DTE/1DTE the right product for this moment</li>
+      </ul>
+    </div>
+
+    <p>This is what beta access means in practice as a Trader X Partner. You see the service first. You trade it first. And when it launches to the public at full retail, you don't get a bill.</p>
+
+    <p>The same pattern will repeat in Q3 when the new AI scanners go live. And again when the next launch comes after that.</p>
+
+    <p>As a Partner, you're permanently on the inside of every product cycle we run.</p>
+
+    <p>The Partnership comes with more than products, though. There are things money usually can't buy at Option Pit. Partners get them automatically.</p>
+  </section>
+
+  <!-- ============ SECTION VII: Partner Benefits ============ -->
+  <section>
+    <div class="section-number">Section VII</div>
+    <h2>The Partner Benefits Money Doesn't Buy</h2>
+
+    <div class="benefits">
+      <div class="benefit">
+        <div class="benefit-title">Ted, Your VP of Concierge</div>
+        <p>Not a support ticket. Not a help desk. Ted is a direct line to a named person on our team who knows your account, knows your goals, and answers the phone. Questions about a trade, a strategy, a payment, a credit. One call. He's the same person every time.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-title">Removed From All Option Pit Marketing. Forever.</div>
+        <p>The day you become a Partner, your contact information is pulled from every promotional list we run. You'll only hear from us about the trades, the team, and your concierge. You already own everything. There's nothing left to sell you.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-title">First Access to Every Beta</div>
+        <p>Before any new product hits the general public, you're in the room testing it. Often weeks. Sometimes months. The way Project MNS members got Project NEXT before anyone else.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-title">The Annual In-Person Conference</div>
+        <p>Your seat is included. ($1,000 value.) Mark, Andrew, Ted, the entire team. In person. Real people, real conversations, no Zoom.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-title">The Exclusive Partner-Only Meet at the Conference</div>
+        <p>Trader X Partners have their own private gathering inside the conference. Partners only. This is where you sit down with the team, talk shop, and meet the other Partners. Many of whom are running portfolios you'd recognize.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-title">The Trader X Masterclass + All Future Masterclasses</div>
+        <p>Our complete Masterclass video series is yours from day one. ($1,000 value.) Every Masterclass we produce going forward is included automatically.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-title">Exclusive Trader X Swag</div>
+        <p>Mugs, hats, sweatshirts, polos. The kind of gear that quietly tells the people around you that you're in a room they aren't.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-title">Live Calendar of Every Event</div>
+        <p>You won't need to add anything. It will all just be there.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-title">Live Stream Into One Private Room</div>
+        <p>Every Option Pit trading session, streamed directly into the Trader X room. One destination for all of it.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-title">24/7 Private Partner Chatroom</div>
+        <p>Upload charts. Direct message other Partners. Comment in threads. We've built it to feel less like a help forum and more like a private trading floor.</p>
+      </div>
+    </div>
+
+    <p>These are the daily benefits. There's one more. And it's the one most Partners tell us made the decision for them.</p>
+  </section>
+
+  <!-- ============ SECTION VIII: Legacy Status ============ -->
+  <section>
+    <div class="section-number">Section VIII</div>
+    <h2>Legacy Status: Only For Lifetime Partners</h2>
+
+    <p>This is one of the reasons most of our top members choose Lifetime over Annual.</p>
+
+    <p>Trader X Lifetime is the only subscription in our company that comes with <strong>Legacy Status.</strong></p>
+
+    <p>That means your Lifetime Partnership can be passed on. To your spouse. To your children. To your grandchildren.</p>
+
+    <p>We've heard from members who've asked if they can include their Partnership in their will. The answer is yes.</p>
+
+    <p>This isn't just an investment in your trading. It's a piece of financial infrastructure your family can rely on after you're gone.</p>
+
+    <div class="standout">
+      More than one Lifetime Partner has told us the same thing.<br><em>"I wanted to know my spouse wouldn't have to figure this out alone."</em>
+    </div>
+
+    <p>That's what Legacy Status is for.</p>
+
+    <p>To transfer or gift your Lifetime Partnership, you call Ted. He handles it from there.</p>
+
+    <p>Which leads us to the part where you have a decision to make.</p>
+  </section>
+
+  <!-- ============ SECTION IX: Pricing ============ -->
+  <section>
+    <div class="section-number">Section IX</div>
+    <h2>Trader X Pricing</h2>
+
+    <div class="pricing-grid">
+      <div class="tier">
+        <div class="tier-name">Trader X Annual</div>
+        <div class="tier-list-price">List Price: $18,500</div>
+        <div class="tier-price">$11,000</div>
+        <div class="tier-price-note">Today's Partner Price</div>
+        <div class="tier-divider"></div>
+        <p>One year of every current service. Every new service launched during your Partnership year. Every Partner benefit. Every Q3 AI scanner.</p>
+        <p>At the end of your year, you can renew at the then-current Annual rate. Which <strong>will be higher.</strong></p>
+        <p>Or you can upgrade to Lifetime at the then-current Lifetime rate. Also higher.</p>
+      </div>
+
+      <div class="tier lifetime">
+        <div class="tier-name">Trader X Lifetime</div>
+        <div class="tier-list-price">List Price: $35,000</div>
+        <div class="tier-price">$22,000</div>
+        <div class="tier-price-note">Today's Partner Price. Plus $500/year maintenance fee.</div>
+        <div class="tier-divider"></div>
+        <p>Everything in Annual. For the rest of your life.</p>
+        <p>Plus Legacy Status, so it can pass to your next of kin.</p>
+        <p>Plus you lock in the $22,000 price <em>forever.</em> As we launch new services and grow, new Lifetime Partners will pay more. Much more. You won't pay another penny beyond the maintenance fee.</p>
+      </div>
+    </div>
+
+    <p>If you're trying to decide between the two, the math makes the call for you.</p>
+  </section>
+
+  <!-- ============ SECTION X: Math ============ -->
+  <section>
+    <div class="section-number">Section X</div>
+    <h2>The Math on Why Lifetime</h2>
+
+    <p>Here's the calculation that matters.</p>
+
+    <div class="math-block">
+      <div class="math-row">
+        <div class="math-label">The retail value of what we sell today</div>
+        <div class="math-value">$36,036 / yr</div>
+      </div>
+      <div class="math-row">
+        <div class="math-label">Ten years of Annual renewals (conservative estimate, with planned annual increases)</div>
+        <div class="math-value">$120,000+</div>
+      </div>
+      <div class="math-row">
+        <div class="math-label">Trader X Lifetime, paid once today</div>
+        <div class="math-value accent">$22,000</div>
+      </div>
+      <div class="math-row">
+        <div class="math-label">Plus annual maintenance</div>
+        <div class="math-value">$500 / yr</div>
+      </div>
+    </div>
+
+    <p>The Lifetime decision pays for itself somewhere in year two or three. Every service we launch after that is pure upside.</p>
+
+    <p>That's why we wrote this order form. That's why we created the Partnership at all.</p>
+
+    <p>You can run the numbers yourself.</p>
+  </section>
+
+  <!-- ============ SECTION XI: Price Goes Up ============ -->
+  <section>
+    <div class="section-number">Section XI</div>
+    <h2>The Price Goes Up Every Year. Permanently.</h2>
+
+    <p>We're not playing games with countdown timers. We're telling you the truth about how this works.</p>
+
+    <p>The price of Trader X Annual and Trader X Lifetime will increase every single year. As we release new services. As the platform grows. As Option Pit expands.</p>
+
+    <p>You don't have to take that on faith. Look at our history.</p>
+
+    <p>Earlier Pro members joined at <strong>$10,000.</strong> Some upgraded to Pro Lifetime at <strong>$20,000.</strong> Today the Annual is $11,000 and Lifetime is $22,000. Every year, the number moves.</p>
+
+    <div class="standout">
+      The $11,000 Annual and $22,000 Lifetime you see today is the lowest these prices will ever be.
+    </div>
+
+    <p>We're going to keep raising the price of Partnership going forward. New services and growing costs make it necessary.</p>
+
+    <p>But once you're in, you're in. The Lifetime fee is a one-time payment.</p>
+
+    <p>That's the whole point of locking in now.</p>
+  </section>
+
+  <!-- ============ SECTION XII: How To Become a Partner ============ -->
+  <section>
+    <div class="section-number">Section XII</div>
+    <h2>How to Become a Partner</h2>
+
+    <p>Becoming a Trader X Partner is not a checkout button. It's a conversation.</p>
+
+    <p>Here's what happens when you decide to move forward.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-title">Call Ted, Your Concierge</div>
+        <p>Call <strong>888-872-3301.</strong> Or email <strong>concierge@optionpit.com</strong> to schedule a call at a time that works for you.</p>
+      </div>
+      <div class="step">
+        <div class="step-title">Ted Pulls Up Your Account and Applies Your Credit</div>
+        <p>Ted will calculate every dollar you've spent with Option Pit in the last 12 months and apply that as a credit toward your Partnership fee. If you've recently joined Option Pit, you'll receive a complimentary <strong>$1,500 credit</strong> to apply toward Trader X.</p>
+      </div>
+      <div class="step">
+        <div class="step-title">Choose Annual or Lifetime, Structure Your Payment Plan</div>
+        <p>Ted will walk you through a personalized payment plan. Pay in full, or break it into installments. A four-month payment plan is standard. We have flexibility based on what works for you.</p>
+      </div>
+      <div class="step">
+        <div class="step-title">Your Partnership Activates</div>
+        <p>You get immediate access to everything. Ted stays in touch as your dedicated point of contact going forward.</p>
+      </div>
+    </div>
+
+    <p>There's no online checkout for Lifetime. We designed it this way on purpose. Lifetime Partners are personally onboarded by Ted.</p>
+  </section>
+
+  <!-- ============ SECTION XIII: Permission Close ============ -->
+  <section class="permission">
+    <h2>This Isn't for Everyone</h2>
+    <p>We want to be honest with you.</p>
+    <p>Trader X is not designed for casual traders. It's not designed for people who are still deciding whether they want to take their portfolio seriously. It's not designed for people who view a trading subscription as a cost.</p>
+    <p>It's designed for people who view it as an investment in themselves.</p>
+    <p>If that's not where you are today, that's okay. You're still part of Option Pit. You'll still get great work from us. Nothing changes.</p>
+    <p>But if you're the kind of person who looks at the math, looks at the people, looks at what we're building, and recognizes that this is the rare moment where the value is wildly out of balance with the price, then you're exactly who this is for.</p>
+    <p>Before you make the call, here are the questions Partners ask most often.</p>
+  </section>
+
+  <!-- ============ SECTION XIV: FAQ ============ -->
+  <section>
+    <div class="section-number">Section XIV</div>
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <details class="faq-item">
+        <summary>This is a big jump from what I'm currently paying. What's the catch?</summary>
+        <div class="faq-answer">
+          <p>There isn't one. The Partnership is structured to align our interests with yours over the long run. Instead of selling you a new service every quarter, we're inviting you in once, permanently. Every new service we launch becomes part of your existing Partnership. It saves you the cost of every future upgrade. And it means we're not constantly marketing to you. That's the whole model.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What if I change my mind after I activate?</summary>
+        <div class="faq-answer">
+          <div class="placeholder-block">
+            <h4>Refund Policy Needs Confirmation</h4>
+            <p>Stansberry uses a 60-day trial window with a $1,000 cancellation fee, framed as a value statement rather than a penalty. To finalize this answer we need to know Trader X's actual policy.</p>
+            <p><strong>Option A (trial window with cancellation fee):</strong> "You have [X days] from activation to decide. If you decide it's not right for you, Ted will refund your Partnership minus a [$X] cancellation fee. The fee exists because in that window you'll have full access to every service, every scanner, and our full Masterclass. Work that's worth tens of thousands of dollars. We're only interested in bringing on Partners who take this seriously."</p>
+            <p><strong>Option B (no refund):</strong> "Trader X is a long-term commitment. We structure it as a non-refundable Partnership. That's why we don't sell it through a checkout. We want you to talk to Ted first, ask every question you have, and only activate when you're sure."</p>
+            <p><strong>Option C:</strong> hybrid policy, written here once confirmed.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>I already have Pro or Pro Lifetime. How does Trader X relate to what I have?</summary>
+        <div class="faq-answer">
+          <div class="placeholder-block">
+            <h4>Pro / Pro Lifetime Crossover Policy Needs Confirmation</h4>
+            <p>For top-1% buyers who already have Pro Lifetime, this is one of the most urgent questions in the document. They need to know where they stand before they'll call. Suggested framing once policy is confirmed:</p>
+            <p><em>"If you're currently a Pro or Pro Lifetime member, you have a direct path into Trader X with significant credit for what you've already paid. The specifics depend on which subscription you have and when you joined. Pro Lifetime members in particular have an upgrade path Ted will walk you through personally. In many cases, the cost to upgrade is a fraction of the full Partnership price. Call Ted to get your specific number."</em></p>
+          </div>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>I already pay for several Option Pit services. Why upgrade?</summary>
+        <div class="faq-answer">
+          <p>The math is straightforward. If you currently subscribe to three or four services, you're likely spending $8,000 to $15,000 a year already. Trader X consolidates that into one Partnership. You get every service we currently offer. Not just the ones you're paying for. And every service we launch in the future is locked in.</p>
+          <p>For a top 1% buyer who's been with us multiple years, the Partnership typically pays for itself in 12 to 18 months. From that point forward, every new launch is upside.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>I'm a swing trader. Or an income trader. Or a long-term investor. Will this fit my style?</summary>
+        <div class="faq-answer">
+          <p>Trader X covers nearly every options-and-equities strategy a serious retail trader runs. Income generation lives in Turbo Income and Weekly Profit Cycles. Short-term trading is covered by Project NEXT, 0DTE, and Ripzone. Institutional flow analysis runs through Ceres Club and Wiretap. AI-driven setups come from Alpha AI. Longer-term positioning is in Capitol Gains and Delta Strike.</p>
+          <p>Partners typically use the three or four services that fit their style. The rest is optional. The breadth is the point. You pick what fits.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>I'm worried I won't have time to use everything.</summary>
+        <div class="faq-answer">
+          <p>You don't need to use every service. Partners typically focus on three or four core services that fit their trading style. The rest is optional.</p>
+          <p>The point isn't to keep up with everything. The point is to have everything available when you need it. You decide what matters to your portfolio.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What if Option Pit changes hands, gets sold, or shuts down?</summary>
+        <div class="faq-answer">
+          <p>As long as Option Pit is in business, your Partnership is active. We've been in business for over 15 years. We have no plans to slow down. And we have institutional commitments in place that protect Partners in the unlikely event of any major company transition. Ted will walk you through the specifics if it matters to your decision.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How does the Legacy transfer actually work?</summary>
+        <div class="faq-answer">
+          <p>Your Lifetime Partnership can be passed to a member of your family at any time. During your lifetime, or as part of your estate. To initiate a transfer, you call Ted. He confirms the recipient's information and reassigns the Partnership.</p>
+          <p>We've had Partners include this in their wills. We've had Partners gift their Partnership to a child during a milestone moment. Either way, Ted handles it.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What's the difference between Annual and Lifetime in plain terms?</summary>
+        <div class="faq-answer">
+          <p>Annual is one year of everything we currently offer plus everything we launch during that year. At the end of the year, you renew at the then-current rate. Which will be higher than today's.</p>
+          <p>Lifetime is the same access. Forever. With Legacy Status, a fixed maintenance fee, and the locked-in price for life.</p>
+          <p>If you plan to be a Partner for more than two or three years, Lifetime is the rational choice. If you want to test the experience first, Annual is the right starting point.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What about my existing subscriptions and the credits I've earned?</summary>
+        <div class="faq-answer">
+          <p>Every dollar you've spent with Option Pit in the last 12 months is credited toward your Partnership fee. Ted will calculate the exact amount when you call.</p>
+          <p>If you've recently joined Option Pit, you'll also receive a $1,500 complimentary credit. There are no exceptions or fine print. Every dollar applies.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What does the Q3 AI launch include?</summary>
+        <div class="faq-answer">
+          <p>We have multiple new AI scanners and trading products in build for Q3. We're holding the specifics until launch. But Trader X Partners will have beta access first. Typically several weeks before the general public. All of it is included in your Partnership at no additional cost.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ Testimonials section ============ -->
+  <section class="testimonials-section">
+    <div class="section-number">Section XV</div>
+    <h2>What Our Partners Have Said</h2>
+
+    <div class="placeholder-block">
+      <h4>Trader X-Specific Testimonials Needed</h4>
+      <p>Three options, in order of preference:</p>
+      <ul>
+        <li><strong>Best:</strong> Quotes from actual Trader X members who joined at the December 18 launch.</li>
+        <li><strong>Good:</strong> Quotes from Mark, Andrew, Frank, or Licia explaining why they wanted to build Trader X.</li>
+        <li><strong>Acceptable:</strong> Existing Pro testimonials reframed with explicit context. For example: "Glen R., now a Trader X Partner, joined Pro Lifetime in 2019."</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============ Final CTA outside container for full-bleed dark band ============ -->
+<div class="container">
+  <div class="final-cta">
+    <h2>To Activate Your Partnership</h2>
+    <p>Call Ted during normal business hours.</p>
+    <div class="final-cta-phone">888 &middot; 872 &middot; 3301</div>
+    <p>Or email <a href="mailto:concierge@optionpit.com" class="final-cta-email">concierge@optionpit.com</a> to schedule a call at a time that works for you.</p>
+    <p style="margin-top: 28px;">Ted will review your account, apply your credit, structure your payment plan, and activate your Partnership.</p>
+  </div>
+
+  <div class="price-summary">
+    <div class="price-summary-row">Trader X Annual: <strong>$11,000</strong></div>
+    <div class="price-summary-note">Renews at then-current rate</div>
+    <div class="price-summary-row" style="margin-top: 16px;">Trader X Lifetime: <strong>$22,000</strong></div>
+    <div class="price-summary-note">One-time. Plus $500/year maintenance. Price locked forever.</div>
+  </div>
+
+  <footer>
+    © 2026 Option Pit. All Rights Reserved.
+  </footer>
+</div>
+
+</body>
+</html>
